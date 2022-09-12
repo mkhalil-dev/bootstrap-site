@@ -9,8 +9,7 @@
   }
   
   img {
-    height: 100%;
-    max-width: 300px;
+    max-width: 240px;
   }
 
   /* Hero and Nav */
@@ -19,7 +18,7 @@ nav{
     flex-flow: row wrap;
     justify-content: space-between;
     background-color: #2C3D4F;
-    padding: 2.5vw 5vw;
+    padding: 1.5rem 5vw;
     font-size: 1.75rem;
     font-weight: 700;
     align-items: center;
@@ -37,9 +36,54 @@ ul:last-child{
     margin-right: -30px;
 }
 
+.hero{
+  background-color: #19BC9C;
+  height: 80vh;
+}
+.hero > * {
+  margin: 15px 0;
+  font-weight: 600;
+}
 
+h1{
+  font-size: 3rem;
+}
+
+.portfolio > *{
+  color: #2C3D4F;
+}
+
+#star-back{
+  color: #2C3D4F;
+}
 
 /* Utilities */
 .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
 
+.line-container{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.line{
+  border: 1;
+  border-style: none;
+  width: 130px;
+  height: 4px;
+  margin: 0 30px;
+  border-radius: 3px;
+}
+
+.line-white{
+  background-color: #fff;
+}
+.line-black{
+  background-color: #2C3D4F;
 }
