@@ -87,6 +87,10 @@ input:focus, textarea{
   outline: none;
 }
 
+.portfolio > .line-container{
+  margin-bottom: 30px;
+}
+
 .footer{
   background-color: #2C3D4F;
   height: 30vh;
@@ -186,7 +190,7 @@ input:focus, textarea{
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   color: #000;
   background-color: #fff;
 }
