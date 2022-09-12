@@ -1,0 +1,45 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  img {
+    height: 100%;
+    max-width: 300px;
+  }
+
+  /* Hero and Nav */
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: #2C3D4F;
+    padding: 2.5vw 5vw;
+    font-size: 1.75rem;
+    font-weight: 700;
+    align-items: center;
+}
+
+ul{
+      list-style: none;
+      display: flex;
+      font-size: 1rem;
+}
+ul > li{
+      margin-right: 40px
+}
+ul:last-child{
+    margin-right: -30px;
+}
+
+
+
+/* Utilities */
+.container{
+
+}
