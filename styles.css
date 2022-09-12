@@ -190,6 +190,10 @@ input:focus, textarea{
   cursor: pointer;
 }
 
+#contact-line {
+  color: red;
+}
+
 .btn:hover {
   color: #000;
   background-color: #fff;
