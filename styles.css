@@ -202,3 +202,20 @@ input:focus, textarea{
 #download{
   margin-right: 10px;
 }
+
+th, td{
+  padding: 3px 4vw;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  background-color: #19BC9C;
+  align-items: center;
+  min-height: 80vh;
+}
+
+
+#tableC{
+  font-weight: 300;
+}

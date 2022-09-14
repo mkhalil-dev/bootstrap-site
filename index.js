@@ -61,6 +61,41 @@ function verification(fn, pn, ea, msg){
         contactLine.innerHTML = "Your Email Address has an incorrect format";
     }
     else{
-        //Make the button work
+        switchToTable(fn, pn, ea, msg)
     }
+}
+//Change style and inert the table
+async function calling(){
+    document.getElementById("table").innerHTML = "<h1>Contact List</h1><table id='tableC'><tr><th>Name</th><th>Email</th><th>Phone Number</th><th>Message</th></tr></table>";
+    document.getElementById("table").classList.add("contact")
+    try {
+        const response = await fetch('http://localhost/fsw/listmessages.php');
+        const data = await response.json()
+        data.forEach((item) => {
+            document.querySelector("tbody").insertAdjacentHTML('beforeend', '<tr><td>'+item.full_name+'</td><td>'+item.email+'</td><td>'+item.phone_number+'</td><td>'+item.message+'</td></tr>')
+        })
+    }catch (error){
+        console.log(error)
+    }
+
+}
+//Calling APIs
+async function switchToTable(fn, pn, ea, msg) {
+    try {
+        //Creating the FormData to Post
+        const body = new FormData()
+        body.set('name', fn)
+        body.set('email', pn)
+        body.set('pnumber', ea)
+        body.set('message', msg)
+        
+        //Posting
+        await fetch('http://localhost/fsw/contact.php', {
+            method: 'POST',
+            body: body
+        });
+    } catch (error) {
+        console.log(error)
+    }
+    calling()
 }
